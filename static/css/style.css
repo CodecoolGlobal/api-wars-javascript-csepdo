@@ -17,6 +17,12 @@ h1 {
     text-shadow: -1px 0 rgba(255, 255, 204, 0.7), 0 1px rgba(255, 255, 204, 0.7), 1px 0 rgba(255, 255, 204, 0.7), 0 -1px rgba(255, 255, 204, 0.7);
 }
 
+.page-item:disabled, .page-link:hover {
+    background-color: rgba(33, 37, 41, 0.7);
+    color: black;
+    text-shadow: -1px 0 rgba(255, 252, 70, 0.7), 0 1px rgba(255, 252, 70, 0.7), 1px 0 rgba(255, 252, 70, 0.7), 0 -1px rgba(255, 252, 70, 0.7)
+}
+
 form {
     margin: 0 35% 0 35%;
 }
@@ -26,25 +32,31 @@ form {
 }
 
 
-.navbar, h1, form {
+.navbar, h1, form, .modal-content {
     color: black;
     text-shadow: -1px 0 rgba(255, 255, 204, 0.7), 0 1px rgba(255, 255, 204, 0.7), 1px 0 rgba(255, 255, 204, 0.7), 0 -1px rgba(255, 255, 204, 0.7);
 }
-.table-hover tbody tr:hover td, .table-hover tbody tr:hover th {
-    text-shadow: -1px 0 rgba(0, 102, 255, 0.8), 0 1px rgba(0, 102, 255, 0.8), 1px 0 rgba(0, 102, 255, 0.8), 0 -1px rgba(0, 102, 255, 0.8);
-}
 
-.session_user_red {
+#session-user[value="red"], .table-hover[value="red"] tbody tr:hover td {
     color: black;
     text-shadow: -1px 0 rgba(255, 51, 51, 0.7), 0 1px rgba(255, 51, 51, 0.7), 1px 0 rgba(255, 51, 51, 0.7), 0 -1px rgba(255, 51, 51, 0.7);
 }
 
-.session_user_green {
+#session-user[value="green"], .table-hover[value="green"] tbody tr:hover td {
     color: black;
     text-shadow: -1px 0 rgba(0, 230, 0, 0.7), 0 1px rgba(0, 230, 0, 0.7), 1px 0 rgba(0, 230, 0, 0.7), 0 -1px rgba(0, 230, 0, 0.7);
 }
 
-.session_user_purple {
+#session-user[value="purple"], .table-hover[value="purple"] tbody tr:hover td {
     color: black;
     text-shadow: -1px 0 rgba(166, 77, 255, 0.7), 0 1px rgba(166, 77, 255, 0.7), 1px 0 rgba(166, 77, 255, 0.7), 0 -1px rgba(166, 77, 255, 0.7);
+}
+
+#session-user[value="choose a color..."], .table-hover[value="choose a color..."] tbody tr:hover td {
+    color: black;
+    text-shadow: -1px 0 rgba(0, 102, 255, 0.8), 0 1px rgba(0, 102, 255, 0.8), 1px 0 rgba(0, 102, 255, 0.8), 0 -1px rgba(0, 102, 255, 0.8);
+}
+
+.modal-content {
+    background-color: rgba(128, 128, 128, 0.7);
 }

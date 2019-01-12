@@ -56,9 +56,11 @@ def login():
     if request.method == 'POST':
         username = request.form['username']
         password = request.form['password']
+        usercolor = request.form['user-color']
         user = data_handler.get_user_by_name(username)
         if user and password_verfication.verify_password(password, user['password']):
             session['user'] = user['username']
+            session['usercolor'] = usercolor
             return redirect('/')
         else:
             message = "Login failed. Please check your details."
