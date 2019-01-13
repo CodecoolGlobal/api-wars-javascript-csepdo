@@ -12,10 +12,12 @@ app.secret_key = os.urandom(24)
 @app.route('/')
 def home():
     headers = ['NAME', 'DIAMETER (km)', 'CLIMATE', 'TERRAIN', 'SURFACE WATER (%)', 'POPULATION', 'RESIDENTS', 'VOTE']
+    modal_headers = ['NAME', 'HEIGHT', 'MASS', 'SKIN COLOR', 'HAIR COLOR', 'EYE COLOR', 'BIRTH YEAR', 'GENDER']
     data_source = 'https://swapi.co/api/planets'
     table_data = requests.get(data_source).json()
     return render_template('trial.html',
                            headers=headers,
+                           modal_headers=modal_headers,
                            table_data=table_data['results'])
 
 
